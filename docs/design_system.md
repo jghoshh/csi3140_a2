@@ -10,14 +10,14 @@ The following document defines the design system for Assignment 2.
 
 ### Primary Typeface
 
-- **Name:** Courier
-- **Type:** Monospace
+- **Name:** Noto Sans
+- **Type:** Sans-Serif
 - **Usage:** Used as the main, base font across the platform for all text elements, providing a clean, uniform look. 
 
 ### Fallback
 
-- **Type:** System Default Monospace Font
-- **Condition:** Applied when Courier is not available on the user's system.
+- **Type:** System Default Sans-Serif font
+- **Condition:** Applied when Noto Sans is unfetchable.
 - **Purpose:** Ensures that text remains readable and stylistically consistent, even if the primary typeface cannot be loaded.
 
 ### Typography Settings
@@ -25,11 +25,11 @@ The following document defines the design system for Assignment 2.
 The following are the specific font sizes used for various text elements within our game. 
 #### Headers
 
-- **Main Heading (`<h1>`)**: `1rem`
+- **Main Heading (`<h1>`)**: `2rem`
   - Used for the main game title on the main page.
-- **Secondary Heading (`<h2>`)**: `1.5rem`
+- **Secondary Heading (`<h2>`)**: `1.4rem`
   - Used for displaying the author names on the main page after the main game title.
-- **Tertiary Heading (`<h3>`)**: `1.2rem`
+- **Tertiary Heading (`<h3>`)**: `1.1rem`
   - Used for displaying supporting information after the main game title and author names on the main page.
 
 #### Body Text
@@ -39,19 +39,16 @@ The following are the specific font sizes used for various text elements within 
 ## Colours
 
 ### Primary Color
-- **Name**: Xanthous
-- **Hex:** `#FCBF49`
+- **Hex:** `#fffbdc`
 
 This color is used for the page.
 
 ### Secondary Color
-- **Name**: Vanilla
-- **Hex:** `#EAE2B7`
+- **Hex:** `#ffe341`
 
 This color is used for the board.
 
 ### Primary Text Color
-- **Name**: Jet
 - **Hex:** `#333333`
 
 This color is used for all text in the application.
@@ -82,12 +79,14 @@ The body is the core component of the application that contains the game board a
 #### Structure
 ```html
 <body>
-    <header id="section-aligner">
+    <header  id="header" class="section-aligner">
       ...
     </header>
-    <p id="board"></p>
-    <br>
-    <p id="score"></p>
+    <section id="main-section">
+      <p id="board"></p>
+      <br />
+      <h2 id="score"></h2>
+    </section>
     <footer id="section-aligner">
       ...
     </footer>
@@ -133,7 +132,7 @@ The footer defines standards and copyright on the application and cites the auth
 The footer component is structured as follows:
 
 ```html
-<footer id="section-aligner">
+<footer class="section-aligner">
     <p>Copyright &copy; 2024 Jay Ghosh & Noah Do Rego</p>
     <p>Connect with us on:
         <a href="https://www.linkedin.com/in/noah-do-rego//">Noah's Linkedin</a>,
@@ -141,3 +140,7 @@ The footer component is structured as follows:
     </p>
 </footer>
 ```
+
+### Corrections
+
+As per the TA's instructions, the fonts have changed to be one style, the colors have been changed to be more neutral and bright, and the footer has been placed at the bottom of the page.
